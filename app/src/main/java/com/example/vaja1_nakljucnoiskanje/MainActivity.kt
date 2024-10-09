@@ -5,16 +5,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.vaja1_nakljucnoiskanje.Sphere
+import com.example.vaja1_nakljucnoiskanje.Fitness
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-    }
+
+fun main (){
+        //SPHERE
+/*        val sphere = Sphere(2)
+        val x = listOf(0.0, 0.0)
+        println(sphere.calculate(x))*/
+        //ACKLEY
+        val ackley = Ackley(2)
+        val x1 = listOf(0.0, 0.0)
+        println(ackley.calculate(x1))
+
 }
